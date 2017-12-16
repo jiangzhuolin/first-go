@@ -2,7 +2,7 @@
 * @Author: jiangzhuolin
 * @Date:   2017-12-16 18:56:41
 * @Last Modified by:   jiangzhuolin
-* @Last Modified time: 2017-12-16 20:09:16
+* @Last Modified time: 2017-12-17 00:28:38
 */
 package main
 
@@ -29,5 +29,5 @@ func firstPage(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/", firstPage)
-    http.ListenAndServe(":8000", nil)
+    http.ListenAndServe(":5000", nil)
 }
