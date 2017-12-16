@@ -2,7 +2,7 @@
 * @Author: jiangzhuolin
 * @Date:   2017-12-16 18:56:41
 * @Last Modified by:   jiangzhuolin
-* @Last Modified time: 2017-12-17 00:28:38
+* @Last Modified time: 2017-12-17 01:01:53
 */
 package main
 
@@ -23,8 +23,10 @@ func reLaunch() {
 }
 
 func firstPage(w http.ResponseWriter, r *http.Request) {
-    io.WriteString(w, "<h1> Hello, this is my deploy server!<h1>")
+    io.WriteString(w, "<p>Trying to deploy the webserver,please wait a minute...<p><br>")
     reLaunch()
+    io.WriteString(w, "<p>Finished deploying the webserver<p>")
+
 }
 
 func main() {
